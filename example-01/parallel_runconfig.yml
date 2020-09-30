@@ -1,0 +1,15 @@
+# Details under https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-parallel-run-step#specify-the-parameters-using-parallelrunconfig
+
+parallel_run_config:
+  output_action: summary_only # only use output for error threshold calculation
+  mini_batch_size: 512 # Minibatch size in bytes (for TabularDataset) - can also be 1KB, 1MB, etc.
+  error_threshold: 0
+  logging_level: INFO
+  compute_target_name: cpu-cluster
+  node_count: 1
+  process_count_per_node: 2
+  entry_script: script.py
+  source_directory: ./
+  run_invocation_timeout: 180
+  run_max_try: 3
+  environment_dir_path: parallel_run_env

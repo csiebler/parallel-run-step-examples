@@ -1,2 +1,3 @@
 # parallel-run-step-examples
-A short, but comprehensive example for using ParallelRunStep in Azure Machine Learning
+
+A short example for training and forecasting many models on e.g., time-series data for multiple SKUs, etc. This uses `ParallelRunStep` on Azure Machine Learning.
